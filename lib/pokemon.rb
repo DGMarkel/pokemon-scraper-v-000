@@ -25,7 +25,7 @@ attr_accessor :id, :type, :name, :db, :hp
 
   def alter_hp(new_hp, db)
     binding.pry
-    db.execute("UPDATE pokemon SET hp = new_hp where id = self.id")
+    db.execute("UPDATE pokemon SET hp = ? where id = self.id",new_hp)
   end
 
 
