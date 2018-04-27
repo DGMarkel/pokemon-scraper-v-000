@@ -4,7 +4,6 @@ attr_accessor :id, :type, :name, :db
 
   def initialize(name)
     @name = name
-    binding.pry
     name.each {|k, v| self.send "#{k}=", v}
   end
 
