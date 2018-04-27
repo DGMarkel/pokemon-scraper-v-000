@@ -24,7 +24,7 @@ attr_accessor :id, :type, :name, :db, :hp
   end
 
   def alter_hp(new_hp, db)
-binding.pry
+    self.hp = new_hp
   end
 
 
