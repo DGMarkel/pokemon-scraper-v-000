@@ -14,7 +14,7 @@ attr_accessor :id, :type, :name, :db
   def self.find(id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
     binding.pry
-    save(pokemon_from_db[0][1], pokemon_from_db[0][2])
+    save(pokemon_from_db[0][1], pokemon_from_db[0][2], db)
   end
 
 
