@@ -20,6 +20,7 @@ attr_accessor :id, :type, :name, :db
     :db => db
     }
     pikachu_from_db = Pokemon.new(pokemon_hash)
+    binding.pry
   end
 
 
