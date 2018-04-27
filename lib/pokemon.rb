@@ -17,6 +17,7 @@ attr_accessor :id, :type, :name, :db
     :name => pokemon_from_db[0][1],
     :type => pokemon_from_db[0][2],
     }
+    binding.pry
     Pokemon.new(pokemon_hash)
   end
 
