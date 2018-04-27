@@ -13,7 +13,7 @@ attr_accessor :id, :type, :name, :db
 
   def self.find(id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
-
+    binding.pry
     pokemon_hash = {
     :id => id,
     :name => pokemon_from_db[0][1],
