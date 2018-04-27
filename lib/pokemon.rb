@@ -18,7 +18,7 @@ attr_accessor :id, :type, :name, :db
     :id => id,
     :name => pokemon_from_db[1],
     :type => pokemon_from_db[2],
-    :hp => pokemon_from_db[3]
+    :hp => pokemon_from_db[3],
     :db => db
     }
     Pokemon.new(pokemon_hash)
