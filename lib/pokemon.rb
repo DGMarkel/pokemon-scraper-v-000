@@ -13,7 +13,6 @@ attr_accessor :id, :type, :name, :db, :hp
 
   def self.find(id, db)
     pokemon_from_db = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
-    binding.pry
     pokemon_hash = {
     :id => id,
     :name => pokemon_from_db[1],
@@ -22,6 +21,10 @@ attr_accessor :id, :type, :name, :db, :hp
     :db => db
     }
     Pokemon.new(pokemon_hash)
+  end
+
+  def alter_hp(new_hp, db)
+    
   end
 
 
